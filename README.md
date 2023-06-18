@@ -10,7 +10,7 @@ docker run
 --env MYSQL_PASSWORD=dummypassword 
 --env MYSQL_DATABASE=social-media-database 
 --name mysql 
---publish 3306:3306 mysql:8-oracle![image](https://github.com/onurokkyay/RestfulSocialMediaService/assets/59628395/691c1836-cd1e-45fa-952b-48b7c714490a)
+--publish 3306:3306 mysql:8-oracle
 
 
 http://localhost:8080/swagger-ui/index.html
