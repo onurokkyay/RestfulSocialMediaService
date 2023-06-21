@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.krawenn.rest.webservices.socialmediaservice.entity.Post;
-import com.krawenn.rest.webservices.socialmediaservice.service.impl.PostServiceImpl;
+import com.krawenn.rest.webservices.socialmediaservice.service.IPostService;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
@@ -23,7 +23,7 @@ import jakarta.validation.constraints.Min;
 public class PostController {
 	
 	@Autowired
-	private PostServiceImpl postService;
+	private IPostService postService;
 
 	@GetMapping("/socialmediaservice/post/{postId}")
 	public Optional<Post> retrievePostById(@Min(1) @PathVariable int postId) {

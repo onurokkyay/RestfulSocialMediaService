@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.krawenn.rest.webservices.socialmediaservice.entity.User;
-import com.krawenn.rest.webservices.socialmediaservice.service.impl.UserServiceImpl;
+import com.krawenn.rest.webservices.socialmediaservice.service.IUserService;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
@@ -24,7 +24,7 @@ import jakarta.validation.constraints.Min;
 public class UserController {
 
 	@Autowired
-	private UserServiceImpl userService;
+	private IUserService userService;
 
 	@GetMapping("/socialmediaservice/users")
 	public List<User> retrieveAllUsers() {
